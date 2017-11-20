@@ -1,8 +1,8 @@
  #define trigPin 9
-     #define echoPin 10
-     #define led 8
+ #define echoPin 10
+ #define led 8
 
-     #include <Filters.h>
+ #include <Filters.h>
 
 // filters out changes faster that 5 Hz.
 float filterFrequency = .3  ;
