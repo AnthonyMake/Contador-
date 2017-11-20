@@ -22,10 +22,10 @@ FilterOnePole lowpassFilter2( LOWPASS, filterFrequency );
 
      void loop()
         {   
-            digitalWrite(trigPin, LOW);        // Nos aseguramos de que el trigger está desactivado
+            digitalWrite(trigPin, LOW);        // Nos aseguramos de que el trigger estÃ¡ desactivado
             delayMicroseconds(2);              // Para asegurarnos de que el trigger esta LOW
             digitalWrite(trigPin, HIGH);       // Activamos el pulso de salida
-            delayMicroseconds(10);             // Esperamos 10µs. El pulso sigue active este tiempo
+            delayMicroseconds(10);             // Esperamos 10Âµs. El pulso sigue active este tiempo
             digitalWrite(trigPin, LOW);        // Cortamos el pulso y a esperar el echo
             duracion = pulseIn(echoPin, HIGH) ;
             duracion=lowpassFilter.input( duracion );
@@ -33,10 +33,10 @@ FilterOnePole lowpassFilter2( LOWPASS, filterFrequency );
               duracion=10000;
             distancia = duracion / 2 / 29.1  ;
         
-            digitalWrite(12, LOW);        // Nos aseguramos de que el trigger está desactivado
+            digitalWrite(12, LOW);        // Nos aseguramos de que el trigger estÃ¡ desactivado
             delayMicroseconds(2);              // Para asegurarnos de que el trigger esta LOW
             digitalWrite(12, HIGH);       // Activamos el pulso de salida
-            delayMicroseconds(10);             // Esperamos 10µs. El pulso sigue active este tiempo
+            delayMicroseconds(10);             // Esperamos 10Âµs. El pulso sigue active este tiempo
             digitalWrite(12, LOW);        // Cortamos el pulso y a esperar el echo
             duracion2 = pulseIn(13, HIGH) ;
             duracion2=lowpassFilter2.input( duracion2 );
